@@ -1,0 +1,68 @@
+
+.background {
+    background: url("/IMAGEN-ORIGEN-scaled-1.webp") no-repeat center center fixed;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: -10px;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-bottom: -10px;
+    overflow: hidden;
+    z-index: 1;
+  }
+  .particulas{
+    position: absolute;
+    z-index: 1;
+    overflow: hidden;
+  }
+  .content-container {
+    display: flex;
+    font-family: Arial, sans-serif;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 40%;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+h1 {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 60px;
+    color: #ffffff;
+    text-shadow: 1px 1px 4px rgba(255, 215, 0, 0.6);
+}
+.start-button {
+    padding: 15px 30px;
+    font-size: 20px;
+    color: white;
+    background: linear-gradient(135deg, #e2ac3d, #ffc552);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.5);
+    transition: all 0.3s ease;
+    margin: 10px 0;
+    width: 200px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+}
+
+.start-button:hover {
+    background: linear-gradient(135deg, #ffd700, #e2ac3d);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.8), 0 0 30px rgba(255, 215, 0, 0.6);
+    transform: translateY(-3px);
+}

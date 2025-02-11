@@ -1,0 +1,126 @@
+.background {
+    background: url("/IMAGEN-ORIGEN-scaled-1.webp") no-repeat center center fixed;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: -10px;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-bottom: -10px;
+    overflow: hidden;
+    z-index: 1;
+  }
+  h2 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    margin-top: 40px;
+    font-size: 60px;
+    color: #ffffff;
+    text-shadow: 1px 1px 4px rgba(255, 215, 0, 0.6);
+}
+  .particulas{
+    position: absolute;
+    z-index: 1;
+    overflow: hidden;
+  }
+  .cartas-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: -10px;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-bottom: -10px;
+    overflow: hidden;
+    z-index: 1;
+  }
+  .card-container {
+    position: relative;
+    width: 100vw;
+    height: 60vh;
+    margin-top: 15vh;
+  }
+  
+  .card {
+    position: absolute;
+    transition: all 0.5s ease-in-out;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card.selected {
+    transform: scale(1.2) translateY(-50px) rotateY(180deg);
+    transition: transform 1s ease-in-out;
+  }
+  
+  #cardContainer.show {
+    position: absolute;
+    top: 50%;
+    height:1000px;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card.selected {
+    transform: scale(1.2) translateY(-50px) rotateY(180deg);
+    transition: transform 1s ease-in-out;
+  }
+  @media (max-width: 768px) {
+    .card {
+      width: 70px !important;    /* Reducir tamaño */
+      height: 120px !important;
+      margin: -20px;           /* Evitar superposición */
+    }
+  
+    #cardContainer {
+        position: relative; /* Contenedor padre para posicionamiento absoluto */
+        width: 110vw;
+        height: 80vh;
+        overflow: hidden;
+        margin-right: 20px;
+      }
+  
+    /* Ajustes de posicionamiento del abanico */
+    .card {
+      transform-origin: bottom center !important;
+      margin: 0 -25px;
+    }
+  }
+  
+  /* Ajustes para pantallas muy pequeñas */
+  @media (max-width: 480px) {
+    .card {
+      width: 85px !important;
+      height: 140px !important;
+    }
+  }
+  .fade-out {
+    animation: fadeOut 1s forwards;
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }

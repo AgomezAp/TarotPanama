@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>TarotChile</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script>
+    document.addEventListener('keydown', function (event) {
+      if (
+        event.key === 'F12' ||
+        (event.ctrlKey && event.shiftKey && event.key === 'I') || 
+        (event.ctrlKey && event.shiftKey && event.key === 'J') ||
+        (event.ctrlKey && event.key === 'U')
+      ) {
+        event.preventDefault();
+      }
+    });
+  </script>
+<!--   <script>
+    document.addEventListener('contextmenu', (event) => event.preventDefault());
+  </script> -->
+</head>
+<body>
+  <app-root></app-root>
+</body>
+</html>
