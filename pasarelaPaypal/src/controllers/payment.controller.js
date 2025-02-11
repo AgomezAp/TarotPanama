@@ -92,10 +92,10 @@ export const captureOrder = async (req, res) => {
 
     if (response.data.status === "COMPLETED") {
       // Pago aprobado
-      return res.redirect(`http://localhost:4200/descripcion-cartas?status=COMPLETED`);
+      return res.redirect(`https://cartastarotpanama.com/descripcion-cartas?status=COMPLETED`);
     } else {
       // Pago no aprobado
-      return res.redirect(`http://localhost:4200/descripcion-cartas?status=NOT_COMPLETED`);
+      return res.redirect(`https://cartastarotpanama.com/descripcion-cartas?status=NOT_COMPLETED`);
     }
   } catch (error) {
     if (error.response) {
@@ -103,7 +103,7 @@ export const captureOrder = async (req, res) => {
       // Redirige o responde según el código de error
       if(error.response.status === 422){
         // Ejemplo: redirige a una URL de error definida
-        return res.redirect(`http://localhost:4200/descripcion-cartas?status=NOT_COMPLETED`);//cambiar esta url por una cuando se tenga el front que va a manejar errores 
+        return res.redirect(`https://cartastarotpanama.com/descripcion-cartas?status=NOT_COMPLETED`);//cambiar esta url por una cuando se tenga el front que va a manejar errores 
       }
       return res.status(error.response.status).json(error.response.data);
     } else {
