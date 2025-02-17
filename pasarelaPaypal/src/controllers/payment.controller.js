@@ -1,10 +1,11 @@
 import axios from 'axios';
 import dotenv from 'dotenv';
+import jwt from 'jsonwebtoken';
 
 dotenv.config();
 
 
-const { PAYPAL_API_CLIENT, PAYPAL_API_SECRET,PAYPAL_API,HOST } = process.env;
+const { PAYPAL_API_CLIENT, PAYPAL_API_SECRET,PAYPAL_API,HOST,SECRET_KEY } = process.env;
 
 
 export const createOrder = async (req, res) => {
@@ -88,30 +89,37 @@ export const captureOrder = async (req, res) => {
       }
     );
 
-    console.log("*************************************************",response.data.status);
-
     if (response.data.status === "COMPLETED") {
-      // Pago aprobado
-      return res.redirect(`https://cartastarotpanama.com/descripcion-cartas?status=COMPLETED`);
+      const approvalToken = jwt.sign(
+        { status: 'approved', timestamp: Date.now() },
+        SECRET_KEY,
+        { expiresIn: '5m' }
+      );
+      
+      return res.redirect(
+        `https://cartastarotpanama.com/descripcion-cartas?status=COMPLETED&token=${approvalToken}`
+      );
     } else {
-      // Pago no aprobado
-      return res.redirect(`https://cartastarotpanama.com/descripcion-cartas?status=NOT_COMPLETED`);
+      const rejectToken = jwt.sign(
+        { status: 'not_approved', timestamp: Date.now() },
+        SECRET_KEY,
+        { expiresIn: '5m' }
+      );
+      
+      return res.redirect(
+        `https://cartastarotpanama.com/descripcion-cartas?status=NOT_COMPLETED&token=${rejectToken}`
+      );
     }
   } catch (error) {
     if (error.response) {
       console.error('Error de PayPal:', error.response.data);
-      // Redirige o responde según el código de error
-      if(error.response.status === 422){
-        // Ejemplo: redirige a una URL de error definida
-        return res.redirect(`https://cartastarotpanama.com/descripcion-cartas?status=NOT_COMPLETED`);//cambiar esta url por una cuando se tenga el front que va a manejar errores 
-      }
-      return res.status(error.response.status).json(error.response.data);
-    } else {
-      console.error('Error desconocido:', error.message);
-      return res.status(500).json({ message: 'Error interno del servidor' });
+      return res.redirect(`https://cartastarotpanama.com/descripcion-cartas?status=ERROR`);
     }
-}
+    console.error('Error desconocido:', error.message);
+    return res.redirect(`https://cartastarotpanama.com/descripcion-cartas?status=ERROR`);
+  }
 };
+
 
 export const cancelPayment = (req, res) => res.redirect("/");
 
