@@ -45,7 +45,7 @@ export class DescriptionComponent {
   isLoading: boolean = false;
   paymentAttempted: boolean = false;
   private encryptionKey = 'U0qQ0TGufDDJqCNvQS0b795q8EZPAp9E';
-  token = 'DEJAELSHOW';
+  token = 'J8eSuyU4zEDbHOpcPk4I7o7k53';
   constructor(private cardService: CardService, private router: Router, private route: ActivatedRoute, private http: HttpClient,) { }
 
 
