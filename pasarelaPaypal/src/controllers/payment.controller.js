@@ -26,8 +26,8 @@ export const createOrder = async (req, res) => {
         shipping_preference: "NO_SHIPPING",
         user_action: "PAY_NOW",
         return_url: `${HOST}/capture-order`,
-        failure_url: `${HOST}/cancel-payment`,
-        cancel_url: `${HOST}/cancel-payment`,
+        failure_url: `${HOST}/welcome`,
+        cancel_url: `${HOST}/descripcion-cartas`,
       },
     };
 
