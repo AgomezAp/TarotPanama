@@ -21,7 +21,7 @@ export const createOrder = async (req, res) => {
         },
       ],
       application_context: {
-        brand_name: "TarotLatinoamerica",
+        brand_name: "Tarot Latinoamerica",
         landing_page: "NO_PREFERENCE",
         shipping_preference: "NO_SHIPPING",
         user_action: "PAY_NOW",
@@ -39,7 +39,7 @@ export const createOrder = async (req, res) => {
     const {
       data: { access_token },
     } = await axios.post(
-      "https://api-m.sandbox.paypal.com/v1/oauth2/token",
+       "https://api-m.paypal.com/v1/oauth2/token",
       params,
       {
         headers: {
