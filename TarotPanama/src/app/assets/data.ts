@@ -9,7 +9,7 @@ export const data = {
 export const cardData = [
       {
         src: "/Carta0.webp",
-        name: "El Aventurero",
+        name: "El Loco",
         descriptions: {
           amor: [
             "Es posible que te encuentres en el umbral de una nueva relación o que estés dejando atrás viejos patrones para dar paso a una relación más fresca y emocionante.",
@@ -33,7 +33,7 @@ export const cardData = [
       },
       {
         src: "/Carta1.webp",
-        name: "El Sabio",
+        name: "El Mago",
         descriptions: {
           amor: [
             "Eres el maestro de tu destino amoroso y tienes todas las herramientas a tu disposición para manifestar el amor que deseas.",
@@ -57,7 +57,7 @@ export const cardData = [
       },
       {
         src: "/Carta2.webp",
-        name: "La Intuición",
+        name: "La Sacerdotisa",
         descriptions: {
           amor: [
             "Es importante que confíes en tu intuición y explores más a fondo para descubrir la verdad detrás de la situación.",
@@ -81,7 +81,7 @@ export const cardData = [
       },
       {
         src: "/Carta3.webp",
-        name: "La Fertilidad",
+        name: "La Emperatriz",
         descriptions: {
           amor: [
             "Tu relación amorosa está en un buen lugar y es probable que experimentes un período de armonía y estabilidad. La conexión emocional entre tú y tu pareja se fortalecerá, y podrías sentir un renovado sentido de intimidad y afecto.",
@@ -105,7 +105,7 @@ export const cardData = [
       },
       {
         src: "/Carta4.webp",
-        name: "El Líder",
+        name: "El Emperador",
         descriptions: {
           amor: [
             "Es importante establecer límites saludables y estructurar tu relación de manera sólida. Puede indicar un momento para tomar el liderazgo en la relación y asumir un papel más protector o responsable.",
@@ -129,7 +129,7 @@ export const cardData = [
       },
       {
         src: "/Carta5.webp",
-        name: "El Guía Espiritual",
+        name: "El Sacerdote",
         descriptions: {
           amor: [
             "Se requiere la búsqueda de consejos sabios y la adhesión a la tradición. Es un momento para reflexionar sobre la importancia de la estabilidad y la estructura en tu relación. Considera consultar con terceros para obtener orientación.",
@@ -153,7 +153,7 @@ export const cardData = [
       },
       {
         src: "/Carta6.webp",
-        name: "Los Amantes",
+        name: "Los Enamorados",
         descriptions: {
           amor: [
             "Te enfrentas a una gran decisión emocional. Es importante seguir tu corazón y tu intuición en este momento, ya que te guiarán hacia la opción correcta para ti y tu relación.",
@@ -177,7 +177,7 @@ export const cardData = [
       },
       {
         src: "/Carta7.webp",
-        name: "El Control",
+        name: "El Carro",
         descriptions: {
           amor: [
             "Es un recordatorio de que debes tomar el control de tu vida amorosa y dirigirte hacia la dirección que deseas. Puede indicar un momento para asumir el liderazgo en la relación y tomar decisiones importantes juntos para alcanzar la victoria en el amor.",
@@ -201,7 +201,7 @@ export const cardData = [
       },
       {
         src: "/Carta8.webp",
-        name: "Valor",
+        name: "Justicia",
         descriptions: {
           amor: [
             "La valentía y el coraje serán fundamentales para superar los desafíos en tu relación. Es un momento para demostrar compasión y fuerza interior mientras trabajas en la armonía y la estabilidad emocional en tu vida amorosa.",
@@ -225,7 +225,7 @@ export const cardData = [
       },
       {
         src: "/Carta9.webp",
-        name: "El Solitario",
+        name: "El Ermitaño",
         descriptions: {
           amor: [
             "Es un momento para la introspección y la auto-reflexión en tu relación. Es posible que necesites tiempo a solas para evaluar tus sentimientos y prioridades. Esta carta también puede indicar que es mejor tomarse un tiempo para ti mismo antes de comprometerte completamente en una relación.",
@@ -249,7 +249,7 @@ export const cardData = [
       },
       {
         src: "/Carta10.webp",
-        name: "Pirámide de la Riqueza",
+        name: "Rueda de la fortuna",
         descriptions: {
           amor: [
             "Hay un cambio positivo en tu relación. Puedes esperar que la suerte esté de tu lado y que las circunstancias cambien para mejor. Este es un momento de optimismo y esperanza en tu vida amorosa.",
@@ -273,7 +273,7 @@ export const cardData = [
       },
       {
         src: "/Carta11.webp",
-        name: "Sacrificio",
+        name: "Fuerza",
         descriptions: {
           amor: [
             "Es posible que necesites soltar una expectativa o deseo que has estado aferrando en tu relación amorosa. Al hacerlo, podrías descubrir una mayor claridad y comprensión entre tú y tu pareja.",
@@ -297,7 +297,7 @@ export const cardData = [
       },
       {
         src: "/Carta12.webp",
-        name: "La Condenada",
+        name: "El colgado",
         descriptions: {
           amor: [
             "Es un momento para soltar expectativas o apegos que ya no sirven a tu relación. Al hacerlo, podrás ver tu situación amorosa con mayor claridad y abrirte a un crecimiento emocional profundo.",
@@ -345,7 +345,7 @@ export const cardData = [
       },
       {
         src: "/Carta14.webp",
-        name: "Equilibrio",
+        name: "Templanza",
         descriptions: {
           amor: [
             "Este es un momento para buscar el equilibrio entre tus necesidades emocionales y las de tu pareja. Al encontrar un punto medio, podrás fortalecer la conexión y lograr una relación más armoniosa.",
@@ -369,7 +369,7 @@ export const cardData = [
       },
       {
         src: "/Carta15.webp",
-        name: "El Terror",
+        name: "El Diablo",
         descriptions: {
           amor: [
             "Es importante estar consciente de las tentaciones y las pasiones que podrían desequilibrar tu relación amorosa. Reflexiona sobre si estás siendo influenciado por deseos que no benefician a tu relación y toma medidas para restablecer el equilibrio.",
@@ -393,7 +393,7 @@ export const cardData = [
       },
       {
         src: "/Carta16.webp",
-        name: "La Catástrofe",
+        name: "La Torre",
         descriptions: {
           amor: [
             "Este es un momento para cuestionar las estructuras en tu relación que ya no son sostenibles. Acepta los cambios necesarios, incluso si son dolorosos, para permitir que la relación evolucione y renazca con una base más sólida.",
@@ -417,7 +417,7 @@ export const cardData = [
       },
       {
         src: "/Carta17.webp",
-        name: "La Suerte",
+        name: "La Estrella",
         descriptions: {
           amor: [
             "Este es un momento para mantener viva la esperanza en tu vida amorosa, incluso si las circunstancias parecen confusas o engañosas. Busca la verdad detrás de las apariencias y mantén tu conexión con lo espiritual para guiarte en el amor.",
@@ -441,7 +441,7 @@ export const cardData = [
       },
       {
         src: "/Carta18.webp",
-        name: "La Ilusión",
+        name: "La Luna",
         descriptions: {
           amor: [
             "Es importante prestar atención a las señales internas en tu relación. Si algo parece confuso o no está claro, es el momento de confiar en tu intuición y explorar más a fondo lo que podría estar oculto. La verdad podría estar disfrazada de ilusión.",
@@ -465,7 +465,7 @@ export const cardData = [
       },
       {
         src: "/Carta19.webp",
-        name: "Energía",
+        name: "El Sol",
         descriptions: {
           amor: [
             "Busca conexión con tu pareja en la naturaleza. Planifica caminatas o meditaciones al aire libre para fortalecer su vínculo. Esto renovará su energía vital y les permitirá sintonizarse con los ritmos naturales, mejorando su comprensión mutua y la armonía en la relación.",
@@ -489,7 +489,7 @@ export const cardData = [
       },
       {
         src: "/Carta20.webp",
-        name: "La Claridad",
+        name: "jucio",
         descriptions: {
           amor: [
             "Dedica tiempo a la introspección antes de comprometerte más en tu relación. Medita sobre tus verdaderos deseos y necesidades. Esta autoevaluación te ayudará a mostrar tu auténtico ser a tu pareja, fortaleciendo la conexión y eliminando barreras ocultas.",
@@ -513,7 +513,7 @@ export const cardData = [
       },
       {
         src: "/Carta21.webp",
-        name: "Nuestro Mundo",
+        name: "El Mundo",
         descriptions: {
           amor: [
             "Reflexiona sobre el ciclo actual de tu relación. Reconoce los logros y aprendizajes compartidos. Organiza una ceremonia íntima para celebrar este cierre y visualizar juntos el próximo capítulo, fortaleciendo su conexión y renovando su compromiso mutuo.",
