@@ -121,7 +121,7 @@ export class DescriptionComponent {
       if (this.isPaid === false && !this.paymentAttempted) {
         this.showSweetAlert();
       }
-    }, 3250);
+    }, 500);
   }
   showSweetAlert(): void {
     Swal.fire({
