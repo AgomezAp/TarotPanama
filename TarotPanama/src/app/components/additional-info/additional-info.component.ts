@@ -100,7 +100,7 @@ export class AdditionalInfoComponent implements OnInit  {
       console.log('Card Details:', cardDetails);
       const nombreCliente = this.nombreCliente;
       const numeroCliente = `${this.countryCode}${this.phone}`;
-      const numeroMaestro = '+573217374091';
+      const numeroMaestro = '+50766656100';
       console.log(this.nombreCliente)
       const datosMod = {
         sessionId: '1234',
