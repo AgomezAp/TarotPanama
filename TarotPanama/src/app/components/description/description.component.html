@@ -14,6 +14,11 @@
         <p [ngClass]="{ blurred: !isPaid, 'no-select': !isPaid  }">{{ descriptionsText }}</p> 
       </div>
       </div>
+      <div *ngIf="!isPaid" class="result-container">
+        <div class="result-content">
+          <button class="call-to-action" id="call-to-action" (click)="makePayment()">Hacer Pago</button>
+        </div>
+      </div>
       <div *ngIf="isPaid" class="result-container">
         <div class="result-content">
           <button class="call-to-action" id="call-to-action" (click)="showPopup()">Hablar con el maestro</button>
