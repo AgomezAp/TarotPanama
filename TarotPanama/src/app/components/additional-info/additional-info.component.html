@@ -21,6 +21,13 @@
               <input id="phoneInput" type="text" [(ngModel)]="phone" required />
             </div>
           </div>
+          <div class="input-group terms-group">
+            <input type="checkbox" id="termsCheckbox" [(ngModel)]="termsAccepted" />
+            <label for="termsCheckbox">
+              Acepto los 
+              <a href="/terminos-y-condiciones" target="_blank" style="text-decoration: underline;">términos y condiciones</a>
+            </label>
+          </div>
           <div id="errorMessage" class="none">Por favor, selecciona un código de país.</div>
           <div id="numErrorMessage" class="none">Por favor, ingresa un número válido.</div>
           <button id ="desplegable" class="desplegable" (click)="submitPhone()">Hablar con el maestro</button>

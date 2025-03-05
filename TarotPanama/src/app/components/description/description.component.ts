@@ -84,7 +84,7 @@ export class DescriptionComponent {
           const decodedToken = jwtDecode(token) as { status: string };
           if (decodedToken.status === 'not_approved') {
             this.isPaid = false;
-            this.paymentAttempted = true;  // Marca que ya se intentó el pago
+            this.paymentAttempted = true;  
             Swal.fire({
               title: 'Tu pago fue rechazado por el provedor',
               text: 'Vuelve a intentarlo nuevamente o contacta a tu banco para obtener más información.',
