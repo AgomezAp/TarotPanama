@@ -17,8 +17,6 @@ import {
   Router,
 } from '@angular/router';
 
-import * as CryptoJS from 'crypto-js';
-
 import { ParticlesComponent } from '../../shared/particles/particles.component';
 
 @Component({
@@ -41,7 +39,8 @@ export class AdditionalInfoComponent implements OnInit  {
   selectedCards: any[] = [];
   private encryptionKey = 'U0qQ0TGufDDJqCNvQS0b795q8EZPAp9E';
   termsAccepted: boolean = false;
-
+  tema = localStorage.getItem('tema');
+  recopila: any[] = [];
   constructor(
     private router: Router,
     private route: ActivatedRoute,
@@ -49,7 +48,8 @@ export class AdditionalInfoComponent implements OnInit  {
   ) {}
 
   ngOnInit(): void {
-    const encryptedData = localStorage.getItem('paymentData');
+    const recopilaData = localStorage.getItem('selectedCards');
+   /*  const encryptedData = localStorage.getItem('paymentData');
     if (encryptedData) {
       try {
         const bytes = CryptoJS.AES.decrypt(encryptedData, this.encryptionKey);
@@ -59,7 +59,11 @@ export class AdditionalInfoComponent implements OnInit  {
       } catch (e) {
         console.error('Error al desencriptar los datos:', e);
       }
-    }
+    } */
+      if (recopilaData) {
+        this.recopila = JSON.parse(recopilaData);
+        console.log('Card Details:', this.recopila);
+      }
   }
 
   submitPhone(): void {
@@ -96,7 +100,7 @@ export class AdditionalInfoComponent implements OnInit  {
       }, 500);
 
       // Recopilar datos de las cartas seleccionadas
-      const cardDetails = this.selectedCards.map(card => ({
+      const cardDetails = this.recopila.map(card => ({
         name: card.name,
         description: card.descriptions[0] // Asumiendo que solo hay una descripción por carta
       }));
@@ -112,7 +116,7 @@ export class AdditionalInfoComponent implements OnInit  {
         phoneNumberCliente: numeroCliente,
         phoneNumberMaestro: numeroMaestro,
         nombreDelCliente: this.nombreCliente,
-        message: `Nueva consulta de ${this.nombreCliente} (${numeroCliente}): \n\n${cardDetails.map(card => `Carta: ${card.name}, Descripción: ${card.description}`).join('\n')} \n\nPonte en contacto con el cliente:\n\nhttps://wa.me/${numeroCliente}`,
+        message: `Nueva consulta de ${this.nombreCliente} (${numeroCliente}): Tema: ${this.tema}   \n\n${cardDetails.map(card => `Carta: ${card.name}, Descripción: ${card.description}`).join('\n')} \n\nPonte en contacto con el cliente:\n\nhttps://wa.me/${numeroCliente}`,
       };
 
       const url = 'https://gestor-de-mesajeria-via-whatsapp-g5hc.onrender.com/api/messages/CrearMensaje';

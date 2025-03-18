@@ -3,32 +3,46 @@
   <div class="cards-container" [@fadeIn]>
     <div class="card-description">
       <div class="cards">
-        <div *ngFor="let card of selectedCards; let i = index" class="card-item">
+        <div
+          *ngFor="let card of selectedCards; let i = index"
+          class="card-item"
+        >
           <img [src]="card.src" alt="Carta seleccionada" />
           <h3>{{ card.name }}</h3>
         </div>
       </div>
       <div class="description-content">
         <div class="result-page">
-        <h3>Descripción General</h3>
-        <p [ngClass]="{ blurred: !isPaid, 'no-select': !isPaid  }">{{ descriptionsText }}</p> 
+          <h3>Descripción General</h3>
+          <!-- [ngClass]="{ blurred: !isPaid, 'no-select': !isPaid  }" -->
+          <p>{{ descriptionsText }}</p>
+        </div>
       </div>
-      </div>
-      <div *ngIf="!isPaid" class="result-container">
+      <!-- <div *ngIf="!isPaid" class="result-container">
         <div class="result-content">
           <button class="call-to-action" id="call-to-action" (click)="makePayment()">Hacer Pago</button>
         </div>
-      </div>
-      <div *ngIf="isPaid" class="result-container">
+      </div> 
+      *ngIf="isPaid" 
+      -->
+
+      <div class="result-container">
         <div class="result-content">
-          <button class="call-to-action" id="call-to-action" (click)="showPopup()">Hablar con el maestro</button>
+          <button
+            class="call-to-action"
+            id="call-to-action"
+            (click)="showPopup()"
+          >
+            Hablar con la maestra
+          </button>
         </div>
+      </div>
     </div>
   </div>
-</div>
-<div id="loadingOverlay" class="loading-overlay" *ngIf="isLoading">
+  <!-- <div id="loadingOverlay" class="loading-overlay" *ngIf="isLoading">
   <div class="loading-content">
     <img src="/gifCarga2.gif" alt="Cargando..." />
     <p>En unos momentos serás redirigid&#64; a la pasarela de pago</p>
   </div>
+</div> -->
 </div>

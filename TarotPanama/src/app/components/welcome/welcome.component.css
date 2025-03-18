@@ -1,47 +1,49 @@
-
 .background {
-    background: url("/IMAGEN-ORIGEN-scaled-1.webp") no-repeat center center fixed;
-    background-size: cover;
-    background-position: center center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin-top: -10px;
-    margin-left: -10px;
-    margin-right: -10px;
-    margin-bottom: -10px;
-    overflow: hidden;
-    z-index: 1;
-  }
-  .particulas{
-    position: absolute;
-    z-index: 1;
-    overflow: hidden;
-  }
-  .content-container {
-    display: flex;
-    font-family: Arial, sans-serif;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 40%;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 10px;
-    overflow: hidden;
-    z-index: 1;
-  }
-  
-h1 {
-    text-align: center;
-    margin-top: 25px;
-    font-size: 60px;
-    color: #ffffff;
-    text-shadow: 1px 1px 4px rgba(255, 215, 0, 0.6);
+  background: url("/IMAGEN-ORIGEN-scaled-1.webp") no-repeat center center fixed;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-top: -10px;
+  margin-left: -10px;
+  margin-right: -10px;
+  margin-bottom: -10px;
+  overflow: hidden;
+  z-index: 1;
 }
+
+.particulas {
+  position: absolute;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.content-container {
+  display: flex;
+  font-family: Arial, sans-serif;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 40%;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 60px;
+  color: #ffffff;
+  text-shadow: 1px 1px 4px rgba(255, 215, 0, 0.6);
+}
+
 .start-button {
   padding: 15px 30px;
   font-size: 20px;
