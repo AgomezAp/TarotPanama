@@ -106,7 +106,7 @@ export class CardsComponent implements OnInit {
     const isMobile = window.innerWidth <= 768;
     const radius = isMobile ? 140 : 240; // Radio más pequeño para móviles
     const centerX = window.innerWidth / 2.0;
-    const centerY = window.innerHeight / (isMobile ? 2.2: 1.45) + 20;
+    const centerY = window.innerHeight / (isMobile ? 2.2 : 1.45) + 20;
   
     for (let i = 0; i < numberOfCards; i++) {
       const cardData = this.cards[i];
@@ -119,11 +119,11 @@ export class CardsComponent implements OnInit {
         card.classList.add("card");
         card.style.position = "absolute";
         card.style.width = isMobile ? "120px" : "150px"; // Tamaño adaptable
-        card.style.height = isMobile ? "200px" : "250px"; // Tamaño adaptable
+        card.style.height = isMobile ? "180px" : "220px"; // Ajusta la altura aquí
         card.style.border = "1px solid #ccc";
         card.style.borderRadius = "10px";
         card.style.left = `${centerX + radius * Math.sin(radian) - (isMobile ? 40 : 95)}px`;
-        card.style.top = `${centerY - radius * Math.cos(radian) - (isMobile ? 190 : 190)}px`;
+        card.style.top = `${centerY - radius * Math.cos(radian) - (isMobile ? 100 : 125)}px`; // Ajusta la posición vertical aquí
         card.style.opacity = "0";
         card.style.zIndex = `${i}`;
         card.style.transform = `rotate(${angle}deg)`;
