@@ -5,13 +5,13 @@
   background-position: center center;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Cambiado de center a flex-start */
+  justify-content: center;/* Cambiado de center a flex-start */
   align-items: center;
   min-height: 100vh; /* Cambiado de height a min-height */
-  margin-top: -23px;
+  margin-top: -10px;
   margin-left: -17px;
   margin-right:-17px;
-  margin-bottom: -9px;
+  margin-bottom: 0px;
   box-sizing: border-box;
   overflow-y: auto; /* Permite scroll si es necesario */
   z-index: 1;
@@ -30,13 +30,12 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 90%; /* Reducido para móviles */
-    max-width: 500px; /* Máximo ancho para escritorio */
+    width: 90%;
+    max-width: 500px;
     padding: 20px;
-    margin-top: 20px;
     border-radius: 10px;
-    z-index: 1;
-}
+    z-index: 2; /* Asegura que esté sobre las partículas */
+  }
   
 h1 {
   text-align: center;
@@ -49,18 +48,17 @@ h1 {
 .start-button-amor, 
 .start-button-futuro, 
 .start-button-dinero {
-  padding: 12px 25px; /* Reducido */
-  font-size: clamp(16px, 4vw, 20px); /* Tamaño responsive */
+  padding: 15px 30px;
+  font-size: 20px;
   color: white;
-  background: linear-gradient(180deg, #FAE365, #FFBA63);
+  background: linear-gradient(135deg, #e2ac3d, #ffc552);
   border: none;
   border-radius: 50px;
   cursor: pointer;
   box-shadow: 0 4px 15px rgba(255, 215, 0, 0.5);
   transition: all 0.3s ease;
-  margin: 8px 0; /* Reducido */
-  width: 80%; /* Ancho relativo */
-  max-width: 200px; /* Máximo ancho */
+  margin: 10px 0;
+  width: 200px;
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 1px;
