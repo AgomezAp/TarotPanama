@@ -8,10 +8,10 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin-top: -23px;
-    margin-left: -17px;
-    margin-right:-17px;
-    margin-bottom: -9px;
+  margin-top: -8px;
+  margin-left: -17px;
+  margin-right:-17px;
+  margin-bottom: -9px;
   overflow: hidden;
   z-index: 1;
 }
@@ -22,11 +22,10 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 40%;
+  width: 80%;
   padding: 20px;
   margin-top: 20px;
-  height: 40%;
-  background: rgba(0, 0, 0, 0.5);
+  height: 80%;
   border-radius: 10px;
   overflow: hidden;
   z-index: 1;

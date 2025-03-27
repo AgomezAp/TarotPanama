@@ -2,6 +2,9 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import express from 'express';
 
+import sequelize from './connection/connection.js';
+import { Datos } from './models/datos.js';
+import datosRoutes from './routes/datos.routes.js';
 import paymentRoutes from './routes/payment.routes.js';
 
 dotenv.config();
@@ -15,6 +18,7 @@ class Server {
       this.middlewares();
       this.listen();
       this.routes();
+      this.DbConnection();
     }
   
     listen() {
@@ -43,8 +47,19 @@ class Server {
     
     routes() {
       this.app.use(paymentRoutes);
+      this.app.use(datosRoutes);
     }
   
+    async DbConnection(){
+      try {
+        /* {force: true}{alter: true} */
+        await sequelize.authenticate();
+        await Datos.sync({force: true})
+        console.log("Conexión a la base de datos exitosa");
+        }catch (error) {
+          console.log("Error al conectar a la base de datos", error);
+        }
+    }
 }
   
   export default Server;
