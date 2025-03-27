@@ -52,9 +52,9 @@ class Server {
   
     async DbConnection(){
       try {
-        /* {force: true}{alter: true} */
+        /* {force:true}{alter: true} */
         await sequelize.authenticate();
-        await Datos.sync({force: true})
+        await Datos.sync()
         console.log("Conexión a la base de datos exitosa");
         }catch (error) {
           console.log("Error al conectar a la base de datos", error);

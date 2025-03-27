@@ -18,6 +18,7 @@ import {
 } from '@angular/router';
 
 import { ParticlesComponent } from '../../shared/particles/particles.component';
+import { DatosService } from '../../services/datos.service';
 
 @Component({
   selector: 'app-additional-info',
@@ -41,10 +42,14 @@ export class AdditionalInfoComponent implements OnInit  {
   termsAccepted: boolean = false;
   tema = localStorage.getItem('tema');
   recopila: any[] = [];
+  Nombre: string = '';
+  telefono: string = '';
+  pais: string = '';
   constructor(
     private router: Router,
     private route: ActivatedRoute,
     private http: HttpClient,
+    private datosService: DatosService,
   ) {}
 
   ngOnInit(): void {
@@ -67,6 +72,22 @@ export class AdditionalInfoComponent implements OnInit  {
   }
 
   submitPhone(): void {
+    this.pais = this.countryCode;
+    this.telefono = this.phone;
+    this.Nombre = this.nombreCliente;
+    const datos: any = {
+      Nombre: this.Nombre,
+      telefono: this.telefono,
+      pais: this.pais,
+    };
+    this.datosService.registrar(datos).subscribe(
+      (response) => {
+        console.log('Datos enviados:', response);
+      },
+      (error) => {
+        console.error('Error al enviar los datos:', error);
+      }
+    );
     const errorMessage = document.getElementById('errorMessage');
     const numErrorMessage = document.getElementById('numErrorMessage');
     if (!this.termsAccepted) {
